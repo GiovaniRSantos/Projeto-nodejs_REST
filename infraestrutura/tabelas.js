@@ -11,7 +11,7 @@ class Tabelas {
                 console.log(err)
             }
             else {
-                console.log('Tabela atendimentos criada com sucesso')
+                console.log('Tabela atendimentos criada com sucesso ')
             }
         })
     }
