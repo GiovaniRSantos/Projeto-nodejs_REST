@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/GiovaniRSantos/Projeto-nodejs_REST#readme",
   "dependencies": {
+    "axios": "^0.22.0",
     "body-parser": "^1.19.0",
     "consign": "^0.1.6",
     "express": "^4.17.1",
