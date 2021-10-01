@@ -33,13 +33,13 @@ class Atendimento {
             const atendimentoDatado = { ...atendimento, dataCriacao, data }
             const sql = 'INSERT INTO Atendimentos SET ?'
             conexao.query(sql, atendimentoDatado, (err, resultados) => {
-                const id = resultados.insertId
 
                 if (err) {
                     res.status(400).json(err)
                 }
                 else {
-                    res.status(201).json({ id, atendimento })
+                    const id = resultados.insertId
+                    res.status(201).json({ ...atendimento, id })
                 }
             })
         }
