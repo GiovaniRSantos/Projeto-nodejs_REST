@@ -34,6 +34,7 @@ class Atendimento {
             const sql = 'INSERT INTO Atendimentos SET ?'
             conexao.query(sql, atendimentoDatado, (err, resultados) => {
                 const id = resultados.insertId
+
                 if (err) {
                     res.status(400).json(err)
                 }
@@ -56,8 +57,9 @@ class Atendimento {
         })
     }
 
+
     buscaId(id, res) {
-        const sql = `SELECT * FROM Atendimentos WHERE id=${id}`
+        const sql = `SELECT * FROM Atendimentos WHERE id-${id}`
         conexao.query(sql, async (err, resultados) => {
             const atendimento = resultados[0]
             const cpf = atendimento.cliente
